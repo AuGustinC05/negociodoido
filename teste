@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vamos sair sábado?</title>
+  <style>
+    #caixaSim {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vamos sair sábado?</h1>
+  <button onclick="exibirCaixaSim()">Sim</button>
+  <button onclick="exibirCaixaNao()">Não</button>
+
+  <div id="caixaSim">
+    <p>Estou te aguardando ansiosamente!</p>
+  </div>
+
+  <script>
+    function exibirCaixaSim() {
+      document.getElementById("caixaSim").style.display = "block";
+    }
+
+    function exibirCaixaNao() {
+      var caixaNao = document.createElement("div");
+      var textoNao = document.createTextNode("Que pena! Quem sabe na próxima?");
+      caixaNao.appendChild(textoNao);
+      document.body.appendChild(caixaNao);
+    }
+  </script>
+</body>
+</html>
